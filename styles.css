@@ -16,11 +16,9 @@
 */
 
 :root {
-    /* Primary Colors */
     --color-lime: hsl(61, 70%, 52%);
+    --color-light-lime: hsl(69, 68%, 65%);
     --color-red: hsl(4, 69%, 50%);
-
-    /* Neutral Colors */
     --color-white: hsl(0, 0%, 100%);
     --color-blue-100: hsl(202, 86%, 94%);
     --color-blue-300: hsl(203, 41%, 72%);
@@ -30,6 +28,7 @@
 }
 
 body {
+
     background-color: var(--color-blue-100);
     height: 100vh;
     margin: 0;
@@ -66,6 +65,10 @@ h1 {
     text-decoration: underline;
 }
 
+.reset:hover {
+    color: var(--color-blue-500);
+}
+
 label, legend {
     font-size: 1rem;
     color: var(--color-blue-300);
@@ -88,6 +91,10 @@ input {
     height: 2.2em;
     z-index: -50;
     margin-bottom: 1.5em;
+}
+
+input:hover {
+    border: solid 1px var(--color-blue-500);
 }
 
 .mortgage-amount input {
@@ -139,6 +146,10 @@ fieldset div {
     border: solid 1px var(--color-blue-300);
 }
 
+.form-check:hover {
+    border: solid 1px var(--color-lime);
+}
+
 .form-check-label {
     color: var(--color-blue-900);
     font-weight: 700;
@@ -160,6 +171,10 @@ fieldset div {
     justify-content: center;
     align-items: center;
     margin: 1.75em 0 -0.5em 0;
+}
+
+.calculate:hover {
+    background-color: var(--color-light-lime);
 }
 
 article {
