@@ -145,6 +145,10 @@ fieldset div {
     border-radius: 3px;
 }
 
+fieldset {
+    margin-bottom: 1em;
+}
+
 .form-check {
     padding-left: 2.5em;
     margin-bottom: 0.4em;
@@ -204,6 +208,13 @@ fieldset div {
 
 .calculate:hover {
     background-color: var(--color-light-lime);
+}
+
+.error-message {
+    display: none;
+    margin-top: -0.75em;
+    margin-bottom: 0.75em;
+    color: var(--color-red);
 }
 
 article {
