@@ -186,32 +186,34 @@ function calculateBtn() {
             const repayment = monthlyPayment;
             document.querySelector('.results-container').innerHTML =
             `
-            <h2>Your results</h2>
-            <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+            <h2 class="result-h2">Your results</h2>
+            <p class="result-p1">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
             <section class="result-amounts">
                 <p>Your monthly repayments</p>
                 <div class="monthly">
-                    <p class="monthly-amount">R<span>${repayment}</span></p>
+                    <p class="monthly-amount">R <span>${repayment.toFixed(2)}</span></p>
                 </div>
+                <hr/>
                 <p>Total you'll repay over the term</p>
                 <div class="total">
-                    <p class="total-amount">R<span>${totalPayment}</span></p>
+                    <p class="total-amount">R <span>${totalPayment.toFixed(2)}</span></p>
                 </div>
             </section>
             `;
         } else if (selectedMortgageType && selectedMortgageType.value === 'interest-only') {
             document.querySelector('.results-container').innerHTML =
             `
-            <h2>Your results</h2>
-            <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+            <h2 class="result-h2">Your results</h2>
+            <p class="result-p1">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
             <section class="result-amounts">
                 <p>Total interest you'll pay over the term</p>
                 <div class="total-interest">
-                    <p class="total-interest-amount">R<span>${totalInterestOnly}</span></p>
+                    <p class="total-interest-amount">R <span>${totalInterestOnly.toFixed(2)}</span></p>
                 </div>
+                <hr/>
                 <p>Total you'll pay over the term</p>
                 <div class="total">
-                    <p class="total-amount">R<span>${totalPayment}</span></p>
+                    <p class="total-amount">R <span>${totalPayment.toFixed(2)}</span></p>
                 </div>
             </section>
             `;
@@ -219,5 +221,22 @@ function calculateBtn() {
 
     } 
 }
-    
 
+// select the clear button
+const clearButton = document.querySelector('.reset'); 
+
+// add click event listener
+clearButton.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent form submission
+    clearAll();
+});
+
+const originalArticleHTML = document.querySelector('.results-container').innerHTML;
+    
+function clearAll() {
+
+    document.querySelector('.mortgage-amount input').value = '';
+    document.querySelector('.mortgage-term input').value = '';
+    document.querySelector('.interest-rate input').value = '';
+    document.querySelector('.results-container').innerHTML = originalArticleHTML;
+}

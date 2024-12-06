@@ -26,6 +26,7 @@
     --color-blue-500: hsl(200, 26%, 54%);
     --color-blue-700: hsl(200, 24%, 40%);
     --color-blue-900: hsl(202, 55%, 16%); 
+    --color-blue-dark: hsl(201, 62%, 8%); 
 }
 
 body {
@@ -244,4 +245,54 @@ article p {
     font-size: 1rem;
     margin: 0 0.5em;
 }
+
+.result-h2 {
+    align-self: start;
+    margin-left: 1em;
+    margin-top: -4em;
+}
+
+.result-p1 {
+    margin-left: 0.85em;
+    text-align: start;
+}
+
+article section {
+    border-radius: 0.75em;
+    background-color: var(--color-blue-dark);
+    width: 96%;
+    margin-top: 2em;
+    border-top: solid 0.35em var(--color-lime);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 2em;
+    padding-bottom: 1.2em;
+}
+
+hr {
+    color: var(--color-blue-100);
+    width: 100%;
+    padding-bottom: 1.2em;;
+}
+
+article section p {
+    margin-bottom: 0.3em;
+    margin-left: 0;
+}
+
+.monthly-amount, .total-interest-amount {
+    margin-bottom: 0.2em;
+    margin-left: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-lime);
+}
+
+.total-amount {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
 
