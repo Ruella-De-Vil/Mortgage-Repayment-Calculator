@@ -30,7 +30,6 @@
 }
 
 body {
-
     background-color: var(--color-blue-100);
     height: 100vh;
     margin: 0;
@@ -43,7 +42,7 @@ body {
 
 main {
     background-color: var(--color-white);
-    width: 67%;
+    width: 60.3125em;
     border-radius:1.5em;
 }
 
@@ -108,7 +107,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .mortgage-amount-input {
-    width: 26.14em;
+    width: 91%;
     border-left: none;    
     margin-left: -0.2em;
     border-top-right-radius: 5px;
@@ -126,7 +125,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .mortgage-term input, .interest-rate input {
-    width: 9.75em;
+    width: 9em;
     border-right: none;
     margin-right: -0.2em;
     border-top-left-radius: 6px;
@@ -248,8 +247,8 @@ article p {
 
 .result-h2 {
     align-self: start;
-    margin-left: 1em;
-    margin-top: -4em;
+    margin-left: 0.5em;
+    margin-top: -2.5em;
 }
 
 .result-p1 {
@@ -294,5 +293,242 @@ article section p {
     font-weight: 700;
     color: var(--color-white);
 }
+
+@media screen and (max-width: 1024px) {
+    main {
+        width: 45em;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    article h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .mortgage-amount-input {
+        width: 87.5%;
+    }
+
+    .mortgage-term input, .interest-rate input {
+        width: 5em;
+    }
+
+    .input-aside {
+        padding: 0.55em 0.8em;
+        margin: 0;
+    }
+    
+    input {
+        height: 2.5em;
+        margin-bottom: 1.2em;
+    }
+
+    fieldset div {
+        height: 2.5em;
+        padding: 0.4em;
+    }
+
+    .calculate {
+        margin-top: -0.2em;
+    }
+
+    article {
+        padding-top: 5em;
+    }
+
+    article section {
+        max-height: 18em;
+        padding: 1em;
+    }
+
+    .monthly-amount, .total-interest-amount {
+        margin-bottom: 0;
+        margin-left: 0;
+        font-size: 2rem;
+    }
+    
+    .total-amount {
+        font-size: 1.2rem;
+    }
+
+    hr {
+        padding-bottom: 0;
+    }
+    
+    article section p {
+        margin-bottom: 0.1em;
+        margin-left: 0;
+        font-size: 0.8rem;
+    }
+
+    article svg {
+        width: 10em;
+        margin-top: -5em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /*already responsive*/
+
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        justify-items: center;
+        align-content: start;
+        padding: 2em 0;
+    }
+
+    main {
+        width: 27em;
+    }
+
+    section {
+        width: unset;
+        margin: 0;
+        border-radius: none;
+        background-color: var(--color-white);
+        padding: 2em ;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    article section h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .mortgage-amount-input {
+        width: 90%;
+    }
+
+    .mortgage-term input, .interest-rate input {
+        width: 7em;
+    }
+
+    .input-aside {
+        padding: 0.55em 0.8em;
+        margin: 0;
+    }
+    
+    input {
+        height: 2.5em;
+        margin-bottom: 1.2em;
+    }
+
+    fieldset div {
+        height: 2.5em;
+        padding: 0.4em;
+    }
+
+    .calculate {
+        margin: auto;
+    }
+
+    article {
+        width: 27em;
+        padding: 1.5em;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    article section {
+        max-height: auto;
+        padding: 1em;
+    }
+
+    .monthly-amount, .total-interest-amount {
+        margin-bottom: 0;
+        margin-left: 0;
+        font-size: 2rem;
+    }
+    
+    .total-amount {
+        font-size: 1.2rem;
+    }
+
+    hr {
+        padding-bottom: 0;
+    }
+    
+    article section p {
+        margin-bottom: 0.1em;
+        margin-left: 0;
+        font-size: 0.8rem;
+    }
+
+    article svg {
+        width: 12em;
+        margin: 0;
+    }
+
+    .results-container {
+        padding-top: 7em;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    body {
+        padding: 0;
+    }
+
+    main {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    article svg {
+        margin-top: -2em;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    .mortgage-amount-input {
+        width: 18.5em;
+    }
+
+    .mortgage-term input, .interest-rate input {
+        width: 6em;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 1.2em;
+    }
+    .mortgage-amount-input {
+        width: 15em;
+    }
+
+    .mortgage-term input, .interest-rate input {
+        width: 4em;
+    }
+}
+
+
 
 
